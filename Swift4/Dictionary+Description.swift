@@ -1,8 +1,24 @@
 extension Dictionary where Key: Comparable {
 
+    /// String representation of this instance,
+    /// with the keys in order.
+    ///
+    /// Useful for inspection and debugging purposes.
+
     var descriptionOrderedByKey: String {
         return makeDescriptionOrderedByKey()
     }
+
+
+    /**
+     
+     Create a String representation of this instance,
+     with the keys in order.
+
+     - Returns: String representation.
+
+     */
+    
     
     func makeDescriptionOrderedByKey() -> String {
 
