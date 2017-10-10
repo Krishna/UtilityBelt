@@ -1,5 +1,6 @@
 ///
-/// 
+/// Better description methods for Dictionary,
+/// to make inspection and debugging easier.
 ///
 
 extension Dictionary where Key: Comparable {
