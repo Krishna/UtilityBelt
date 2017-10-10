@@ -1,3 +1,7 @@
+///
+/// 
+///
+
 extension Dictionary where Key: Comparable {
 
     /// String representation of this instance,
@@ -9,7 +13,6 @@ extension Dictionary where Key: Comparable {
         return makeDescriptionOrderedByKey()
     }
 
-
     /**
      
      Create a String representation of this instance,
@@ -18,31 +21,30 @@ extension Dictionary where Key: Comparable {
      - Returns: String representation.
 
      */
-    
-    
+
     func makeDescriptionOrderedByKey() -> String {
 
         if count == 0 { return "[:]"}
-        
+
         var result = "["
         var first = true
-        
+
         let orderedKeys = self.keys.sorted(by: { $0 < $1 })
         type(of: orderedKeys)
-        
+
         for k in orderedKeys {
             let v = self[k]!
-            
+
             if first { first = false } else { result += ", "}
-            
+
             debugPrint(k, terminator: "", to: &result)
             result += ": "
             debugPrint(v, terminator: "", to: &result)
         }
-        
+
         result += "]"
-        
+
         return result
     }
-    
+
 }
