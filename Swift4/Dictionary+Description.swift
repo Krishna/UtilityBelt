@@ -23,7 +23,7 @@ extension Dictionary where Key: Comparable {
 
      */
 
-    func makeDescriptionOrderedByKey() -> String {
+    private func makeDescriptionOrderedByKey() -> String {
 
         if count == 0 { return "[:]"}
 
