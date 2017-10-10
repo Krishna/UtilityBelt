@@ -31,7 +31,6 @@ extension Dictionary where Key: Comparable {
         var first = true
 
         let orderedKeys = self.keys.sorted(by: { $0 < $1 })
-        type(of: orderedKeys)
 
         for k in orderedKeys {
             let v = self[k]!
